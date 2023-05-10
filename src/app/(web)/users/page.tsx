@@ -29,8 +29,8 @@ export default async function UsersPage() {
                 </Link>
                 {
                     users.map(user => (
-                        <Link href={`/users/${user.id}`}>
-                            <div key={user.id} className="text-3xl">{user.name}</div>
+                        <Link key={user.id} href={`/users/${user.id}`}>
+                            <div  className="text-3xl">{user.name}</div>
                         </Link>
                     ))
                 }
