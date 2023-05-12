@@ -2,6 +2,7 @@ import React from 'react'
 import getWikiResult from '../../../../libs/getWikiResult'
 import { Metadata } from 'next'
 import Item from './component/Item'
+import { notFound } from 'next/navigation'
 
 type Props = {
     params: {
@@ -36,18 +37,21 @@ export default async function SearchResults({params}: Props) {
     const content = (
         <main className='bg-slate-200 mx-auto max-w-lg py-1'>
             {
-                results
-                ? (
+                
+                    // Object.values(results).map(result => (
+                    //     // <p>{JSON.stringify(result)}</p>
+                    //     <Item key={result.pageid} result={result} />
+                    // ))
+                  results 
+                  ? (
                     Object.values(results).map(result => (
-                        // <p>{JSON.stringify(result)}</p>
                         <Item key={result.pageid} result={result} />
                     ))
-                )
-                : (
-                    <h1 className='p-2 text-xl text-red-700'>
-                        {`${params.searchTerm} not founded...`}
-                    </h1>
-                )
+                  ) 
+                  : (
+                     notFound()
+                  )
+               
             }
         </main>
     )
