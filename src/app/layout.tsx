@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Kritbovorn' Blog",
-  description: 'Created by: Kritbovorn',
-  keywords: ['blog', 'my blog']
+  description: 'ข้อมูลสำหรับ React NextJS',
+  keywords: ['blog', 'เทคนิค react nextjs']
 }
 
 export default function RootLayout({
@@ -18,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ `${inter.className} dark:bg-slate-800`}>
-        <Navbar />
-        <MyProfilePicture />
-        {children}
+      <body className={`${inter.className} dark:bg-slate-800 h-screen flex flex-col`}>
+        <div className=''>
+          <Navbar />
+          <MyProfilePicture />
+          {children}
+        </div>
       </body>
     </html>
   )

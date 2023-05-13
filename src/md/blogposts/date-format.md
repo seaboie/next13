@@ -1,6 +1,9 @@
 ---
 title: 'Date Formatter method'
 date: '2023-05-13'
+description: 'การสร้าง Method สำหรับ Format Date()'
+keywords: ['การสร้าง Method สำหรับ Format Date()', 'Format date สำหรับ React nextjs']
+
 --- 
 
 ## Format Date()  

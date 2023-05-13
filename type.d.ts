@@ -1,5 +1,7 @@
 type BlogPost = {
     id: string,
     title: string,
-    date: string
+    date: string,
+    description: string,
+    keywords: string[]
 }

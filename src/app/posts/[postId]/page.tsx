@@ -20,6 +20,8 @@ export function generateMetadata({params}: {params: {postId: string}}): Metadata
 
     return {
         title: post?.title,
+        description: post.description,
+        keywords: post.keywords
     }
 }
 

@@ -11,7 +11,7 @@ export default function ListPost({ post }: Props) {
 
     const formatDate = getFormatDate(date);
     return (
-        <li className='mt-4 text-2xl dark:text-white/90'>
+        <li className='my-20 text-2xl dark:text-white/90'>
             <Link
                 href={`/posts/${id}`}
                 className='underline hover:text-black/70 dark:hover:text-white'
